@@ -1,11 +1,13 @@
 # aviasales тестовое задание Frontend  
 https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend  
 Использован React  
-Менеджер пакетов npm
+Менеджер пакетов npm. В директории для запуска консольные команды  
+"npm install" и "npm start"
 
 Скриншоты
 ![Скрин](screenshots/1.png "screenshot1")
 ![Скрин](screenshots/2.png "screenshot2")
+
 <!-- 
 # Getting Started with Create React App
 
