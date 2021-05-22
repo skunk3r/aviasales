@@ -1,7 +1,7 @@
 # aviasales тестовое задание Frontend  
 https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend  
-Использован React.  
-Менеджер пакетов npm.
+Использован React  
+Менеджер пакетов npm
 
 Скриншоты
 ![Скрин](screenshots/1.png "screenshot1")
