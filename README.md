@@ -1,3 +1,11 @@
+# aviasales тестовое задание Frontend  
+https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend  
+Использован React
+
+Скриншоты
+![Скрин](screenshots/1.png "screenshot1")
+![Скрин](screenshots/2.png "screenshot2")
+<!-- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-->

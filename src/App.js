@@ -20,10 +20,9 @@ function App() {
     {id: 1, name: 'Самый дешевый', selected: true},
     {id: 2, name: "Самый быстрый", selected: false}
   ])
-  const [error, setError] = useState(false)
 
-  useEffect(() => {
-    fetch('https://front-test.beta.aviasales.ru/search')
+  function getTickets() {
+     fetch('https://front-test.beta.aviasales.ru/search')
     .then(response => response.json())
     .then(
       json => fetch(`https://front-test.beta.aviasales.ru/tickets?searchId=${json.searchId}`)
@@ -31,15 +30,16 @@ function App() {
         .then(json => {
           setTickets(json.tickets)
           setLoading(false)
-          console.log(json)
         })
         .catch(err => {
           console.log(err)
-          setError(true)
+          getTickets()
         })
       )
-  }, [])
-    
+  }
+
+  useEffect(getTickets, [])
+
   function onChange(id) {
     
     setFilter(
