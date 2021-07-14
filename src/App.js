@@ -21,7 +21,10 @@ function App() {
     {id: 2, name: "Самый быстрый", selected: false}
   ])
 
-  function getTickets() {
+  function getTickets(numOfCalls) {
+     let count = numOfCalls || 0
+     if (count >= 10) return
+
      fetch('https://front-test.beta.aviasales.ru/search')
     .then(response => response.json())
     .then(
@@ -33,7 +36,7 @@ function App() {
         })
         .catch(err => {
           console.log(err)
-          getTickets()
+          getTickets(++count)
         })
       )
   }

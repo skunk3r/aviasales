@@ -13,13 +13,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 body {
 	background: linear-gradient(to bottom, lavenderblush, lavender);
+  min-height: 100vh;
 	color: #4A4A4A;
 	font-size: 13px;
 	font-family: "Open Sans", sans-serif;

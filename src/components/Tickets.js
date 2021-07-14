@@ -7,12 +7,12 @@ export default function Tickets({props, filters, sorting}) {
 	
 	function filterTickets(tickets, filters) {
 		let filteredTickets = [];
-		let maxTransers = filters.find(item => item.checked) ? 
+		let maxTransfers = filters.find(item => item.checked) ? 
 			filters.filter(item => item.checked).sort((a, b) => b.id - a.id)[0].id : 4;
 		
 		filteredTickets = tickets.filter(item => 
-			(item.segments[0].stops.length <= maxTransers) && 
-			(item.segments[1].stops.length <= maxTransers))
+			(item.segments[0].stops.length <= maxTransfers) && 
+			(item.segments[1].stops.length <= maxTransfers))
 
 		return filteredTickets
 	}
@@ -30,16 +30,26 @@ export default function Tickets({props, filters, sorting}) {
 	tickets = filterTickets(tickets, filters)
 	sortTickets(sorting)
 
-	function numOfTickets(props, num) {
+	function numOfTickets(tickets, num) {
 
 		let arrOfTickets = [];
-
-		for (let i = 0; i < 5; i++) {
-			arrOfTickets.push(
-				<div className='ticket' key={i}>
-					<Ticket ticket={tickets[i]} />
-				</div>
-			)
+		console.log(tickets)
+		if (tickets.length >= num) {
+			for (let i = 0; i < num; i++) {
+				arrOfTickets.push(
+					<div className='ticket' key={i}>
+						<Ticket ticket={tickets[i]} />
+					</div>
+				)
+			}
+		} else {
+			for (let i = 0; i < tickets.length; i++) {
+				arrOfTickets.push(
+					<div className='ticket' key={i}>
+						<Ticket ticket={tickets[i]} />
+					</div>
+				)
+			}
 		}
 
 		return arrOfTickets
